@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'pro-fit';
+
+  nav_item = [
+    { menu: 'Product', sub_menu: [ 'Web builder' ] },
+    { menu: 'Product', sub_menu: [ 'Web builder' ] },
+  ]
 }
