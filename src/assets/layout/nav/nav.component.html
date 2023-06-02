@@ -1,2 +1,10 @@
-<p>nav works!</p>
-<ng-content select="item"></ng-content>
+<div class="nav-wrapper">
+    <div *ngFor="let m of menu;" class="nav-item">
+        <div class="nav-title">
+            {{ m.menu }}
+        </div>
+        <div *ngFor="let s of m.sub_menu" class="nav-sub">
+            {{ s }}
+        </div>
+    </div>
+</div>

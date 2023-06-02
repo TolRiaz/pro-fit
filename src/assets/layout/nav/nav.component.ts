@@ -1,4 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+
+interface Menu {
+  menu     : string;
+  sub_menu : string[];
+}
 
 @Component({
   selector: 'pf-nav',
@@ -6,5 +11,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./nav.component.scss']
 })
 export class NavComponent {
-
+  @Input() menu: Menu[] = []
 }

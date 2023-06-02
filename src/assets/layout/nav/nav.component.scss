@@ -1,0 +1,27 @@
+@import '/src/styles';
+
+.nav-wrapper {
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav-item {
+    width: 100%;
+    text-align: center;
+    padding-bottom: .5rem;
+
+    border: 1px solid; // just test
+}
+
+.nav-item:hover .nav-title{
+    background-color: $main-color-4;
+}
+
+.nav-sub:hover {
+    background-color: $main-color-3;
+}
+
+.nav-title {
+    padding: 0.5rem;
+    background-color: $main-color-1;
+}
