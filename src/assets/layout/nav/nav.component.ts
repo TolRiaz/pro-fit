@@ -12,4 +12,6 @@ interface Menu {
 })
 export class NavComponent {
   @Input() menu: Menu[] = []
+
+  isHover: boolean = false;
 }

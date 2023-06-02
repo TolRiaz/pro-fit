@@ -8,17 +8,41 @@
 .nav-item {
     width: 100%;
     text-align: center;
-    padding-bottom: .5rem;
+    // padding-bottom: .5rem;
 
     border: 1px solid; // just test
 }
 
-.nav-item:hover .nav-title{
+.nav-item:hover .nav-title {
     background-color: $main-color-4;
+    transition: $menu-transition-time;
+}
+
+.nav-wrapper:hover .nav-sub-wrapper {
+    animation: menu-resize 0.5s;
+}
+
+@keyframes menu-resize {
+    0% {
+        opacity: 0;
+        transform: translateY(-30%);
+    }
+    10% {
+        transform: translateY(-10%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.nav-sub {
+    padding: 0.2rem;
 }
 
 .nav-sub:hover {
     background-color: $main-color-3;
+    transition: $menu-transition-time;
 }
 
 .nav-title {
