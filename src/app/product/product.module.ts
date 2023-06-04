@@ -3,17 +3,17 @@ import { CommonModule } from '@angular/common';
 
 import { ProductRoutingModule } from './product-routing.module';
 import { ProductComponent } from './product.component';
-import { WebBuilderComponent } from './web-builder/web-builder.component';
+import { WebBuilderModule } from './web-builder/web-builder.module';
 
 
 @NgModule({
   declarations: [
     ProductComponent,
-    WebBuilderComponent
   ],
   imports: [
     CommonModule,
-    ProductRoutingModule
+    ProductRoutingModule,
+    WebBuilderModule
   ]
 })
 export class ProductModule { }
