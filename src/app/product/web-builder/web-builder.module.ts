@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { WebBuilderComponent } from './web-builder.component';
-import { WblockModule } from 'src/assets/layout/wblock/wblock.module';
+import { WbuilderModule } from 'src/assets/layout/wbuilder/wbuilder.module';
 
 @NgModule({
   declarations: [
@@ -9,7 +9,7 @@ import { WblockModule } from 'src/assets/layout/wblock/wblock.module';
   ],
   imports: [
     CommonModule,
-    WblockModule
+    WbuilderModule
   ]
 })
 export class WebBuilderModule { }
