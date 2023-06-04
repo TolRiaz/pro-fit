@@ -14,7 +14,9 @@ $font-2: arial;
 /*     Time     */
 $menu-transition-time: 0.3s;
 
+html,
 body {
+    height: 100%;
     margin: 0;
     font-family: $font-1;
 }
