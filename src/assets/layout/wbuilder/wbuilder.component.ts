@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import GrapesJS from './grapejs';
+import grapesjs from 'grapesjs';
 
 @Component({
   selector: 'wbuilder',
@@ -13,7 +13,7 @@ export class WbuilderComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.editor = GrapesJS.init({
+    this.editor = grapesjs.init({
       container: '#gjs',
       height: '100%',
       fromElement: true,
