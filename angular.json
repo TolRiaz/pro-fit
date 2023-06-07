@@ -31,10 +31,12 @@
             ],
             "styles": [
               "src/styles.scss",
-              "./node_modules/grapesjs/dist/css/grapes.min.css"
+              "./node_modules/grapesjs/dist/css/grapes.min.css",
+              "./node_modules/toastr/toastr.scss"
             ],
             "scripts": [
-              "./node_modules/grapesjs/dist/grapes.min.js"
+              "./node_modules/grapesjs/dist/grapes.min.js",
+              "./node_modules/toastr/toastr.js"
             ]
           },
           "configurations": {
