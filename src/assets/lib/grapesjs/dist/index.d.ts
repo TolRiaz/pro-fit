@@ -7260,7 +7260,7 @@ declare class PropertyComposite<T extends Record<string, any> = PropertyComposit
 	getSplitSeparator(): RegExp;
 	__upProperties(p: PropertyComposite, opts?: any): any;
 	__upTargetsStyleProps(opts?: {}, prop?: Property): void;
-	_up(props: Partial<PropertyCompositeProps>, opts?: OptionsUpdate): this;
+	_up(props: Partial<PropertyCompositeProps | PropertyStackProps>, opts?: OptionsUpdate): this;
 	getStyle(opts?: {
 		camelCase?: boolean;
 	}): StyleProps;
