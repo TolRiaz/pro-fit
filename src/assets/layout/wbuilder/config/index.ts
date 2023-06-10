@@ -1,4 +1,3 @@
-import juice from '../juice';
 import loadCommands from './commands';
 import loadBlocks from './blocks';
 import loadPanels from './panels';
