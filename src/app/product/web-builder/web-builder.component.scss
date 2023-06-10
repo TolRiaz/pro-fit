@@ -1,0 +1,18 @@
+$page-preview-width : 15rem;
+$page-preview-height: 24rem;
+
+.page-preview {
+    display: inline-block;
+    width:  $page-preview-width;
+    height: $page-preview-height;
+    margin: 1rem;
+    border: solid 1px black;
+    background-size: contain 100%;
+    background-repeat: no-repeat;
+    text-align: center;
+    align-items: center;
+}
+
+.blank {
+    background-image: url(/assets/media/blank_page.png);
+}
