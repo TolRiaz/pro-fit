@@ -1,17 +1,17 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ProductComponent } from './product.component';
+import { WebBuilderComponent } from './web-builder.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: ProductComponent
+    component: WebBuilderComponent
   },
 
   {
-    path: 'web-builder',
-    loadChildren: () => import ('./web-builder/web-builder.module')
-      .then ( c => c.WebBuilderModule )
+    path: 'category',
+    loadChildren: () => import ('./category/category.module')
+      .then ( c => c.CategoryModule )
   },
 
   { path: '**', redirectTo: '' },
@@ -21,4 +21,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class ProductRoutingModule { }
+export class WebBuilderRoutingModule { }

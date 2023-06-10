@@ -1,15 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+
+import { WebBuilderRoutingModule } from './web-builder-routing.module';
 import { WebBuilderComponent } from './web-builder.component';
-import { WbuilderModule } from 'src/assets/layout/wbuilder/wbuilder.module';
+
 
 @NgModule({
-  declarations: [
-    WebBuilderComponent
-  ],
+  declarations: [WebBuilderComponent],
   imports: [
     CommonModule,
-    WbuilderModule
+    WebBuilderRoutingModule
   ]
 })
 export class WebBuilderModule { }

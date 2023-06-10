@@ -13,6 +13,7 @@ import { WebBuilderModule } from './web-builder/web-builder.module';
   imports: [
     CommonModule,
     ProductRoutingModule,
+
     WebBuilderModule
   ]
 })
