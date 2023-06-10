@@ -2,7 +2,9 @@ import loadCommands from './commands';
 import loadBlocks from './blocks';
 import loadPanels from './panels';
 import loadStyles from './styles';
+
 import * as grapesjs from 'src/assets/lib/grapesjs/dist';
+import * as juice from 'juice';
 
 export interface PluginOptions {
   /**
