@@ -37,6 +37,7 @@ export class WbuilderComponent implements OnInit {
       plugins: [ plugin ],
     });
 
+    this.editor.addComponents(this.template)
     this.editor.Css.addRules(this.styles)
 
   }
