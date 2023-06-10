@@ -1,9 +1,9 @@
 import type { Plugin } from 'node_modules/grapesjs';
 import * as juice from 'node_modules/juice';
 import loadBlocks from './blocks';
-// import loadCommands from './commands';
-// import loadPanels from './panels';
-// import loadStyles from './styles';
+import loadCommands from './commands';
+import loadPanels from './panels';
+import loadStyles from './styles';
 
 export interface PluginOptions {
   /**
@@ -205,10 +205,10 @@ const plugin: Plugin<PluginOptions> = (editor, opts: Partial<PluginOptions> = {}
     document.head.appendChild(style);
   }
 
-//   loadCommands(editor, options);
+  loadCommands(editor, options);
   loadBlocks(editor, options);
-//   loadPanels(editor, options);
-//   loadStyles(editor, options);
+  loadPanels(editor, options);
+  loadStyles(editor, options);
 };
 
 export default plugin;
