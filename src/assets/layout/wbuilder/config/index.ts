@@ -2,7 +2,7 @@ import loadCommands from './commands';
 import loadBlocks from './blocks';
 import loadPanels from './panels';
 import loadStyles from './styles';
-import type grapesjs from 'grapesjs';
+import * as grapesjs from 'src/assets/lib/grapesjs/dist';
 
 export interface PluginOptions {
   /**
@@ -132,7 +132,7 @@ export interface PluginOptions {
 
 export type RequiredPluginOptions = Required<PluginOptions>;
 
-const plugin: grapesjs.Plugin<PluginOptions> = (editor, opts: Partial<PluginOptions> = {}) => {
+const plugin: grapesjs.Plugin<PluginOptions> = (editor:grapesjs.Editor, opts: Partial<PluginOptions> = {}) => {
   let config = editor.getConfig();
 
   const options: RequiredPluginOptions = {
