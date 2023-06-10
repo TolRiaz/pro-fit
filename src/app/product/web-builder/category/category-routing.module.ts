@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { WbuilderComponent } from 'src/assets/layout/wbuilder/wbuilder.component';
+import Blank from './blank'
 // import { CategoryComponent } from './category.component';
 
 const routes: Routes = [
@@ -11,7 +12,7 @@ const routes: Routes = [
 
   {
     path: 'blank',
-    data: { type: 'blank' },
+    data: Blank,
     component: WbuilderComponent
   },
 
