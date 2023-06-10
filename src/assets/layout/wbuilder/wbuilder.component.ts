@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import grapesjs from 'grapesjs';
 // import "toastr"
 
+import plugin from './config';
+
 @Component({
   selector: 'wbuilder',
   templateUrl: './wbuilder.component.html',
@@ -23,62 +25,8 @@ export class WbuilderComponent implements OnInit {
       height: '100%',
       fromElement: true,
       storageManager: { autoload: 0 },
+      plugins: [ plugin ],
     });
-
-    this.editor.BlockManager.add('New Block', {
-      label: 'Block',
-      content: `<div style="padding-top:50px; padding-bottom:50px; text-align:center">New block</div>`
-    })
-
-    this.editor.BlockManager.add('New Text', {
-      label: 'Text',
-      content: `<p>New text</p>`
-    })
-
-    this.editor.BlockManager.add('New Button', {
-      label: 'Button',
-      content: `<button style="padding: 1rem; text-align:center">New button</button>`
-    })
-
-    // this.editor.BlockManager.add('New Icon', {
-    //   label: 'Icon',
-    //   content: `<i class="fa-sharp fa-solid fa-image"></i>`
-    // })
-
-    // this.editor.BlockManager.add('New Link', {
-    //   label: 'Link',
-    //   content: `<button style="padding: 1rem; text-align:center">New button</div>`
-    // })
-
-    this.editor.BlockManager.add('New Image', {
-      label: 'Image',
-      content: `<img src="/assets/media/icon.png">`
-    })
-
-    // this.editor.BlockManager.add('New Shape', {
-    //   label: 'Shape',
-    //   content: `<button style="padding: 1rem; text-align:center">New button</div>`
-    // })
-
-    // this.editor.BlockManager.add('New Alert', {
-    //   label: 'Alert',
-    //   content: `<button style="padding: 1rem; text-align:center">New button</div>`
-    // })
-
-    this.editor.BlockManager.add('New Video', {
-      label: 'Video',
-      content: `<video src="/assets/media/hcc.mp4"></video>`
-    })
-
-    // this.editor.BlockManager.add('New HTML', {
-    //   label: 'HTML',
-    //   content: `<button style="padding: 1rem; text-align:center">New button</div>`
-    // })
-
-    // this.editor.BlockManager.add('New Map', {
-    //   label: 'Map',
-    //   content: `<button style="padding: 1rem; text-align:center">New button</div>`
-    // })
 
     this.editor.Css.addRules(`
       .header-banner{
