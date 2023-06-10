@@ -1,11 +1,17 @@
 <div class="nav-wrapper" (mouseover)="isHover = true" (mouseleave)="isHover = false">
     <div *ngFor="let m of menu;" class="nav-item">
-        <div class="nav-title">
-            {{ m.menu }}
-        </div>
+        <a href="/{{ m.menu.link }}">
+            <div class="nav-title">
+                {{ m.menu.name }}
+            </div>
+        </a>
         <div *ngIf="isHover" class="nav-sub-wrapper">
-            <div *ngFor="let s of m.sub_menu" class="nav-sub">
-                {{ s }}
+            <div *ngFor="let s of m.sub_menu">
+                <a href="/{{ m.menu.link }}/{{ s.link }}">
+                    <div class="nav-sub">
+                        {{ s.name }}
+                    </div>
+                </a>
             </div>
         </div>
     </div>

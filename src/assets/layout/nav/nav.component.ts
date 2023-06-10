@@ -1,8 +1,13 @@
 import { Component, Input } from '@angular/core';
 
 interface Menu {
-  menu     : string;
-  sub_menu : string[];
+  menu     : MenuItem;
+  sub_menu : MenuItem[];
+}
+
+interface MenuItem {
+  name : string;
+  link : string;
 }
 
 @Component({
