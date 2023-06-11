@@ -4,7 +4,7 @@ const Demo:Page = {
     template: `<header class="header-banner">
       <div class="container-width">
           <div class="logo-container">
-              <div class="logo">GrapesJS</div>
+              <div class="logo">Pro-fit</div>
           </div>
           <nav class="menu">
               <div class="menu-item">BUILDER</div>
@@ -138,7 +138,7 @@ const Demo:Page = {
           <div class="badges">
               <div class="badge">
                   <div class="badge-header"></div>
-                  <img class="badge-avatar" src="img/team1.jpg">
+                  <img class="badge-avatar" src="/assets/media/team1.png">
                   <div class="badge-body">
                       <div class="badge-name">S.Y. Kim</div>
                       <div class="badge-role">Team Manager</div>
@@ -152,7 +152,7 @@ const Demo:Page = {
               </div>
               <div class="badge">
                   <div class="badge-header"></div>
-                  <img class="badge-avatar" src="img/team2.jpg">
+                  <img class="badge-avatar" src="/assets/media/team2.png">
                   <div class="badge-body">
                       <div class="badge-name">Theo Kim</div>
                       <div class="badge-role">Software Engineer</div>
@@ -166,7 +166,7 @@ const Demo:Page = {
               </div>
               <div class="badge">
                   <div class="badge-header"></div>
-                  <img class="badge-avatar" src="img/team3.jpg">
+                  <img class="badge-avatar" src="/assets/media/team3.png">
                   <div class="badge-body">
                       <div class="badge-name">M.S. Yoon</div>
                       <div class="badge-role">Web Designer</div>
@@ -235,7 +235,7 @@ const Demo:Page = {
         color: #ffffff;
         font-family: Helvetica, serif;
         font-weight: 100;
-        background-image:url("https://grapesjs.com/img/bg-gr-v.png"), url("https://grapesjs.com/img/work-desk.jpg");
+        background-image:url(/assets/media/bg-gr-v.png), url(/assets/media/demo-header-bg.jpg);
         background-attachment:scroll, scroll;
         background-position:left top, center center;
         background-repeat:repeat-y, no-repeat;
