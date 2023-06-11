@@ -1,18 +1,72 @@
+@import '/src/styles';
+
 $page-preview-width : 15rem;
 $page-preview-height: 24rem;
 
 .page-preview {
-    display: inline-block;
-    width:  $page-preview-width;
-    height: $page-preview-height;
+    display: inline-flex;
+    width: $page-preview-width;
     margin: 1rem;
-    border: solid 1px black;
-    background-size: contain 100%;
-    background-repeat: no-repeat;
+}
+
+figure {
+    display: grid;
+    border-radius: 1rem;
+    align-content: center;
+    overflow: hidden;
+    cursor: pointer;
+    justify-content: center;
     text-align: center;
-    align-items: center;
+    margin: 0;
+
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+    transition: all 0.5s ease;
+}
+
+figure:hover {
+    transform: translateY(-.5rem);
+    box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 0.2);
+}
+
+figure > * {
+    grid-area: 1/1;
+    transition: .5s;
+}
+
+figure figcaption {
+    display: grid;
+    align-items: end;
+    font-family: sans-serif;
+    font-size: 2.3rem;
+    font-weight: bold;
+    color: #0000;
+    padding: .75rem;
+    background: var(--c,#0009);
+    clip-path: inset(0 var(--_i,100%) 0 0);
+    -webkit-mask:
+        linear-gradient(#000 0 0),
+        linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    -webkit-mask-clip: text, padding-box;
+    margin: -1px;
+}
+
+figure img {
+    height: calc($page-preview-height - 3rem);
+}
+
+figure:hover figcaption{
+    --_i: 0%;
+}
+figure:hover img {
+    transform: scale(1.2);
+}
+@supports not (-webkit-mask-clip: text) {
+    figure figcaption {
+        -webkit-mask: none;
+        color: #fff;
+    }
 }
 
 .blank {
-    background-image: url(/assets/media/blank_page.png);
 }

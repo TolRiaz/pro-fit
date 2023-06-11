@@ -78,7 +78,7 @@ const Demo:Page = {
   <section class="am-sect">
       <div class="container-width">
           <div class="am-container">
-              <img class="img-phone" onmousedown="return false" src="./img/phone-app.png"/>
+              <img class="img-profit" onmousedown="return false" src="/assets/media/icon.png"/>
               <div class="am-content">
                   <div class="am-pre">ASSET MANAGER</div>
                   <div class="am-title">Manage your images with Asset Manager</div>
@@ -140,8 +140,8 @@ const Demo:Page = {
                   <div class="badge-header"></div>
                   <img class="badge-avatar" src="img/team1.jpg">
                   <div class="badge-body">
-                      <div class="badge-name">Adam Smith</div>
-                      <div class="badge-role">CEO</div>
+                      <div class="badge-name">S.Y. Kim</div>
+                      <div class="badge-role">Team Manager</div>
                       <div class="badge-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore ipsum dolor sit</div>
                   </div>
                   <div class="badge-foot">
@@ -154,7 +154,7 @@ const Demo:Page = {
                   <div class="badge-header"></div>
                   <img class="badge-avatar" src="img/team2.jpg">
                   <div class="badge-body">
-                      <div class="badge-name">John Black</div>
+                      <div class="badge-name">Theo Kim</div>
                       <div class="badge-role">Software Engineer</div>
                       <div class="badge-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore ipsum dolor sit</div>
                   </div>
@@ -168,7 +168,7 @@ const Demo:Page = {
                   <div class="badge-header"></div>
                   <img class="badge-avatar" src="img/team3.jpg">
                   <div class="badge-body">
-                      <div class="badge-name">Jessica White</div>
+                      <div class="badge-name">M.S. Yoon</div>
                       <div class="badge-role">Web Designer</div>
                       <div class="badge-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore ipsum dolor sit</div>
                   </div>
@@ -392,7 +392,8 @@ const Demo:Page = {
         padding-bottom: 100px;
         font-family: Helvetica, serif;
       }
-      .img-phone{
+      .img-profit{
+        height: 180px;
         float: left;
       }
       .am-container{
@@ -411,7 +412,7 @@ const Demo:Page = {
         width: 490px;
         color: #444;
         font-weight: 100;
-        margin-top: 50px;
+        margin: 25px 0;
       }
       .am-pre{
         padding:7px;
