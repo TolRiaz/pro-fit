@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { WbuilderComponent } from 'src/assets/layout/wbuilder/wbuilder.component';
 import Blank from './blank'
 import Demo from './demo'
+import NewsLetter from './newsletter'
 // import { CategoryComponent } from './category.component';
 
 const routes: Routes = [
@@ -20,6 +21,12 @@ const routes: Routes = [
   {
     path: 'demo',
     data: Demo,
+    component: WbuilderComponent
+  },
+
+  {
+    path: 'newsletter',
+    data: NewsLetter,
     component: WbuilderComponent
   },
 
