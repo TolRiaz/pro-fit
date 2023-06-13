@@ -47,20 +47,26 @@ processResources {
 	dependsOn "buildAngular"
 }
 
-task buildAngular(type: NpxTask) {
+// task buildAngular(type: Exec) {
+task buildAngular(type: NpmTask) {
 	dependsOn "installAngular"
 	workingDir = file( "${frontendDir}" )
 	inputs.dir "${frontendDir}"
 	// Add task to the standard build group
 	group = BasePlugin.BUILD_GROUP
 	// ng doesn't exist as a file in windows -> ng.cmd
-	args = ['build', '--prod']
+	// if (System.getProperty("os.name").toUpperCase().contains("WINDOWS")) {
+	//   commandLine "ng.cmd", "build", "--prod"
+	// } else {
+	//   commandLine "ng", "build", "--prod"
+	// }
+	args = ['run', 'build']
 }
 
-task installAngular(type: NpxTask) {
+task installAngular(type: NpmTask) {
 	dependsOn "npmInstall"
 	workingDir = file( "${frontendDir}" )
 	inputs.dir "${frontendDir}"
 	group = BasePlugin.BUILD_GROUP
-	args = ['install']
+	args = ['install', '-g', '@angular/cli@16.0.4']
 }
