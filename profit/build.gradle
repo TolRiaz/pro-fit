@@ -20,20 +20,18 @@ node {
 	version = '20.2.0'
 	npmVersion = '9.6.6'
 	download = true
+	workDir = file("${project.buildDir}/src/main/frontend/src")
+	nodeModulesDir = file("${project.buildDir}/src/main/frontend")
 }
 
-jar.dependsOn 'npm_run_build'
-
-jar {
-	from 'dist/profit' into 'static'
+task buildApp(type: NpmTask) {
+	args = ['run', 'build']
 }
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-
-	implementation( project(':profit') )
 }
 
 tasks.named('test') {
