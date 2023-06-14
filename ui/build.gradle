@@ -1,0 +1,17 @@
+plugins {
+	id 'java'
+	id 'war'
+	id "com.github.node-gradle.node" version "5.0.0"
+}
+
+node {
+	version = '20.2.0'
+	npmVersion = '9.6.6'
+	download = true
+}
+
+war.dependsOn 'npm_run_build'
+
+war {
+    from 'dist/ui' into 'static'
+}
