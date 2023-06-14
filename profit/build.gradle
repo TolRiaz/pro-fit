@@ -15,7 +15,6 @@ repositories {
 	maven { url 'https://repo.spring.io/milestone' }
 	maven { url 'https://repo.spring.io/snapshot' }
 }
-
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
@@ -43,8 +42,11 @@ sourceSets {
 	}
 }
 
-processResources {
+task appSetup(type: Copy) {
 	dependsOn "buildAngular"
+
+    from "${frontendDir}/dist/profit/"
+    into 'src/main/resources/static/'
 }
 
 // task buildAngular(type: Exec) {
