@@ -12,6 +12,6 @@ ADD . .
 
 RUN apt-get update && apt-get install -y git gradle
 RUN cd ${DIR}/profit/ && ./gradlew build
-RUN cp ${DIR}/profit/build/libs/${APP}-${VERSION}.war /usr/local/tomcat/webapps/${APP}.war
+RUN ln -s ${DIR}/profit/build/libs/${APP}-${VERSION}.war /usr/local/tomcat/webapps/${APP}.war
 
 EXPOSE ${PORT}
