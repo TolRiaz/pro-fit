@@ -18,7 +18,7 @@ const NewsLetter:Page = {
               <table class="c1766">
                 <tr>
                   <td class="cell c1769">
-                    <img class="c926" src="/assets/media/icon.png" alt="Profit"/>
+                    <img class="c926" src="assets/media/icon.png" alt="Profit"/>
                   </td>
                   <td class="cell c1776">
                     <div class="c1144">Pro-fit Newsletter Builder
@@ -30,7 +30,7 @@ const NewsLetter:Page = {
               <table class="card">
                 <tr>
                   <td class="card-cell">
-                    <img class="c1271" src="/assets/media/web-builder.webp" alt="Big image here"/>
+                    <img class="c1271" src="assets/media/web-builder.webp" alt="Big image here"/>
                     <table class="table100 c1357">
                       <tr>
                         <td class="card-content">

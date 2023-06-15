@@ -7,7 +7,7 @@ plugins {
 }
 
 group = 'pf'
-version = '0.0.1-SNAPSHOT'
+version = '0.0.3'
 
 java {
 	sourceCompatibility = '11'
@@ -67,7 +67,7 @@ task installAngular(type: NpmTask) {
 
 war {
 	enabled = true
-	archiveFileName = 'pro-fit.war'
+	archiveFileName = "profit-${version}.war"
 	webAppDirectory = file("${frontendDir}/dist/pro-fit")
 	// rootSpec.exclude('index.html')
 }
