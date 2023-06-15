@@ -1,4 +1,4 @@
-package tolriaz.profit;
+package pf.profit;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;

@@ -3,7 +3,7 @@ FROM tomcat:jdk11
 ENV APP=profit
 ENV VERSION=0.0.2
 
-ENV DIR=/tolriaz
+ENV DIR=/pro-fit
 ENV PORT=8080
 
 WORKDIR ${DIR}

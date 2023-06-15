@@ -1,22 +1,25 @@
 plugins {
 	id 'java'
 	id 'war'
-	id 'org.springframework.boot' version '2.7.13-SNAPSHOT'
+	id 'org.springframework.boot' version '2.7.12'
 	id 'io.spring.dependency-management' version '1.0.15.RELEASE'
 	id "com.github.node-gradle.node" version "5.0.0"
 }
 
-group = 'tolriaz'
-version = '0.0.2'
-sourceCompatibility = '11'
+group = 'pf'
+version = '0.0.1-SNAPSHOT'
+
+java {
+	sourceCompatibility = '11'
+}
 
 repositories {
 	mavenCentral()
-	maven { url 'https://repo.spring.io/milestone' }
-	maven { url 'https://repo.spring.io/snapshot' }
 }
+
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
@@ -24,7 +27,6 @@ dependencies {
 tasks.named('test') {
 	useJUnitPlatform()
 }
-
 
 def frontendDir = "${projectDir}/src/main/frontend"
 node {
@@ -42,14 +44,10 @@ sourceSets {
 	}
 }
 
-task appSetup(type: Copy) {
-	dependsOn "buildAngular"
-
-    from "${frontendDir}/dist/profit/"
-    into 'src/main/resources/static/'
+processResources {
+	dependsOn 'buildAngular'
 }
 
-// task buildAngular(type: Exec) {
 task buildAngular(type: NpmTask) {
 	dependsOn "installAngular"
 	workingDir = file( "${frontendDir}" )
@@ -65,4 +63,11 @@ task installAngular(type: NpmTask) {
 	inputs.dir "${frontendDir}"
 	group = BasePlugin.BUILD_GROUP
 	args = ['install', '-g', '@angular/cli@16.0.4']
+}
+
+war {
+	enabled = true
+	archiveFileName = 'pro-fit.war'
+	webAppDirectory = file("${frontendDir}/dist/pro-fit")
+	// rootSpec.exclude('index.html')
 }
